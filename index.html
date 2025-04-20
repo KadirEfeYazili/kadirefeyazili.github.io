@@ -9,56 +9,66 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
 </head>
 <body>
+  <!-- Header Section -->
   <header>
-    <div class="container">
+    <div class="container header-container">
       <h1>Kadir Efe Yazılı</h1>
       <p>Yönetim Bilişim Sistemleri Öğrencisi | Data Science Trainee |</p>
-      <button id="toggleMode">Karanlık Mod</button>
+      <button id="toggleMode" class="mode-button">Karanlık Mod</button>
     </div>
   </header>
 
-  <section id="about">
-    <div class="container about-container fade-in">
+  <!-- About Section -->
+  <section id="about" class="section-container fade-in">
+    <div class="container about-container">
       <h2>Hakkımda</h2>
-      <p class="animated">Ben Kadir Efe, teknolojiyi ve yazılım geliştirmeyi seven biriyim. Python, C#, yapay zeka, kurumsal kaynak planlama ve veri bilimi ile ilgileniyorum. Aynı zamanda içerik üretmeyi seviyor, öğrenmeye ve paylaşmaya önem veriyorum.</p>
+      <p>Ben Kadir Efe, teknolojiyi ve yazılım geliştirmeyi seven biriyim. Python, C#, yapay zeka, kurumsal kaynak planlama ve veri bilimi ile ilgileniyorum. Aynı zamanda içerik üretmeyi seviyor, öğrenmeye ve paylaşmaya önem veriyorum. Her geçen gün kendimi geliştirmeye devam ediyorum.</p>
     </div>
   </section>
 
-<section id="projects">
-  <div class="container fade-in">
-    <h2>Projeler</h2>
+  <!-- Projects Section -->
+  <section id="projects" class="section-container fade-in">
+    <div class="container projects-container">
+      <h2>Projeler</h2>
 
-    <div class="project-card" onclick="toggleDetails(this)">
-      <h3>Horonmatik</h3>
-      <p class="project-desc">Web projesi.</p>
-      <div class="project-details">
-        <p>Bu proje bir web uygulamasıdır. Kullanıcıların seçebileceği farklı kemençe melodilerini çalar ve animasyonlu horon figürleri eşliğinde bir görsel deneyim sunar.</p>
-        <img src="images/horonmatikdemo.gif" alt="Horonmatik Demo" class="project-image">
-        <a href="https://chlorinated-freezing-emery.glitch.me/" target="_blank" class="project-link">Proje Linki</a>
+      <!-- Project Card 1 -->
+      <div class="project-card" onclick="toggleDetails(this)">
+        <h3>Horonmatik</h3>
+        <p class="project-desc">Web projesi.</p>
+        <div class="project-details">
+          <p>Bu proje bir web uygulamasıdır. Kullanıcıların seçebileceği farklı kemençe melodilerini çalar ve animasyonlu horon figürleri eşliğinde bir görsel deneyim sunar.</p>
+          <img src="images/horonmatikdemo.gif" alt="Horonmatik Demo" class="project-image">
+          <a href="https://chlorinated-freezing-emery.glitch.me/" target="_blank" class="project-link">Proje Linki</a>
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="project-card" onclick="toggleDetails(this)">
+        <h3>İstanbul Trafik Analizi</h3>
+        <p class="project-desc">Kaggle'da paylaştığım veri bilimi projesi.</p>
+        <div class="project-details">
+          <p>Bu projede İstanbul'daki trafik yoğunluğu zaman serileri ile analiz edildi. Pandemi etkisi, bayramlar ve haftalık değişim incelendi.</p>
+          <a href="https://www.kaggle.com/kadirefeyazili/istanbul-traffic-analysis" target="_blank" class="project-link">Proje Linki</a>
+        </div>
       </div>
     </div>
-
-    <div class="project-card" onclick="toggleDetails(this)">
-      <h3>İstanbul Trafik Analizi</h3>
-      <p class="project-desc">Kaggle'da paylaştığım veri bilimi projesi.</p>
-      <div class="project-details">
-        <p>Bu projede İstanbul'daki trafik yoğunluğu zaman serileri ile analiz edildi. Pandemi etkisi, bayramlar ve haftalık değişim incelendi.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
   </section>
-      <ul>
-        <li>Email: kadirefeyazili@outlook.com</li>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section-container fade-in">
+    <div class="container contact-container">
+      <h2>İletişim</h2>
+      <ul class="contact-links">
+        <li>Email: <a href="mailto:kadirefeyazili@outlook.com">kadirefeyazili@outlook.com</a></li>
         <li>GitHub: <a href="https://github.com/KadirEfeYazili" target="_blank">Profilim</a></li>
         <li>LinkedIn: <a href="https://www.linkedin.com/in/kadirefeyazili/" target="_blank">Profilim</a></li>
       </ul>
     </div>
   </section>
 
+  <!-- Footer Section -->
   <footer>
-    <div class="container">
+    <div class="container footer-container">
       <p>&copy; 2025 Kadir Efe Yazılı. Tüm Hakları Saklıdır.</p>
       <ul>
         <li><a href="#privacy-policy">Gizlilik Politikası</a></li>
@@ -71,6 +81,7 @@
     </div>
   </footer>
 
+  <!-- Scroll to Top Button -->
   <button id="scrollToTop" class="scroll-to-top">Yukarı</button>
 
   <script>
@@ -114,5 +125,6 @@
     });
   </script>
 </body>
-</html> 
+</html>
+
 
