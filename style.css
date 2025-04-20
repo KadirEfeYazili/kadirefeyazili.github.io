@@ -1,290 +1,514 @@
 /* Genel Stil */
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f7f9fc; /* Açık gri ton */
-  color: #333;
-  margin: 0;
-  padding: 0;
-  transition: background-color 0.3s, color 0.3s;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f8; /* Daha açık, modern bir gri */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+    line-height: 1.6;
 }
 
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Sabit Menü (Navbar) */
-nav {
-  background-color: #1E3A8A; /* Modern mavi ton */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 10px 0;
-  z-index: 1000;
+.section {
+    padding: 60px 0;
 }
 
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.section-title {
+    font-size: 2.2rem;
+    color: #1e3a8a; /* Ana mavi ton */
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
 }
 
-nav ul li {
-  margin: 0 15px;
+.bg-light {
+    background-color: #fff;
 }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+/* Navbar */
+.navbar {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-nav ul li a:hover {
-  color: #4B8DFF; /* Mavi tonda hover efekti */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Header */
-header {
-  margin-top: 60px; 
-  background-color: #1E3A8A; /* Modern mavi ton */
-  color: white;
-  padding: 20px 0;
-  text-align: center;
+.logo {
+    font-size: 1.5rem;
+    color: #1e3a8a;
+    text-decoration: none;
+    font-weight: 700;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem; /* Büyük başlık */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
-header p {
-  margin-top: 10px;
-  font-size: 1.1rem;
+.nav-links li {
+    margin-left: 20px;
 }
 
-/* Button */
-button {
-  background-color: #1E3A8A;
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.nav-links li a {
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-button:hover {
-  background-color: #4B8DFF; /* Mavi tonda hover */
+.nav-links li a:hover {
+    color: #1e3a8a;
+}
+
+.mode-button {
+    background: none;
+    border: none;
+    color: #555;
+    cursor: pointer;
+    font-size: 1.2rem;
+    outline: none;
+    transition: color 0.3s ease;
+}
+
+.mode-button:hover {
+    color: #1e3a8a;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    margin-top: 60px; /* Navbar yüksekliği kadar boşluk */
+}
+
+.hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: #fff;
+    color: #1e3a8a;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #4b8dff;
+    color: white;
+}
+
+/* About Section */
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    color: #555;
 }
 
 /* Proje Kartları */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
 .project-card {
-  background-color: #fff;
-  border: 1px solid #E5E7EB; /* Gri ton */
-  padding: 20px;
-  margin-bottom: 20px;
-  cursor: pointer;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .project-card:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-title {
+    padding: 20px;
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 700;
+}
+
+.project-description {
+    padding: 0 20px 20px;
+    margin: 0;
+    color: #777;
 }
 
 .project-details {
-  display: none;
-  margin-top: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+    display: none;
 }
 
 .project-card.active .project-details {
-  display: block;
+    display: block;
 }
 
-/* Yazı Geçiş Efekti */
-.animated {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease-out;
+.project-image {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #eee;
 }
 
-.animated.visible {
-  opacity: 1;
-  transform: translateY(0);
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #1e3a8a;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
 }
 
-/* Scroll to Top Butonu */
-.scroll-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #1E3A8A;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 50%;
-  font-size: 1.4rem;
-  cursor: pointer;
-  display: none;
-  transition: background-color 0.3s ease;
+.project-link:hover {
+    background-color: #4b8dff;
 }
 
-.scroll-to-top:hover {
-  background-color: #4B8DFF;
+/* Contact Section */
+.contact-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-text {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contact-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.contact-links li {
+    margin-bottom: 15px;
+}
+
+.contact-links li a {
+    color: #1e3a8a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-links li a:hover {
+    color: #4b8dff;
+}
+
+.contact-links li i {
+    margin-right: 10px;
+    color: #1e3a8a;
 }
 
 /* Footer */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9rem;
 }
 
-footer a {
-  color: #fff;
-  text-decoration: none;
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-footer a:hover {
-  text-decoration: underline;
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
 }
 
-footer .social-media a {
-  margin: 0 15px;
+.footer-links li {
+    margin: 0 15px;
 }
 
-/* Form */
-form {
-  display: flex;
-  flex-direction: column;
+.footer-links li a {
+    color: #eee;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-form label {
-  margin-top: 10px;
+.footer-links li a:hover {
+    color: #fff;
+    text-decoration: underline;
 }
 
-form input, form textarea {
-  padding: 12px;
-  margin-top: 8px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+.social-media {
+    margin-top: 20px;
 }
 
-form button {
-  background-color: #1E3A8A;
-  color: white;
-  padding: 12px;
-  border: none;
-  cursor: pointer;
-  border-radius: 6px;
-  margin-top: 20px;
+.social-media a {
+    color: #eee;
+    font-size: 1.2rem;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-form button:hover {
-  background-color: #4B8DFF;
+.social-media a:hover {
+    color: #fff;
 }
 
-/* Karanlık Mod */
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: none;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: #4b8dff;
+}
+
+.scroll-to-top i {
+    vertical-align: middle;
+}
+
+/* Fade In Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dark Mode */
 body.dark-mode {
-  background-color: #121212;
-  color: #E0E0E0;
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
-body.dark-mode header {
-  background-color: #1E3A8A;
+body.dark-mode .navbar {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
-body.dark-mode .scroll-to-top {
-  background-color: #1E3A8A;
+body.dark-mode .logo,
+body.dark-mode .nav-links li a,
+body.dark-mode .mode-button {
+    color: #bbdefb;
+}
+
+body.dark-mode .nav-links li a:hover,
+body.dark-mode .mode-button:hover {
+    color: #81d4fa;
+}
+
+body.dark-mode .hero {
+    background-color: #303030;
+}
+
+body.dark-mode .section-title {
+    color: #81d4fa;
+}
+
+body.dark-mode .bg-light {
+    background-color: #212121;
 }
 
 body.dark-mode .project-card {
-  background-color: #333;
-  border-color: #444;
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    border: 1px solid #424242;
 }
 
-body.dark-mode .project-card:hover {
-  transform: translateY(-12px) scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+body.dark-mode .project-title,
+body.dark-mode .project-description,
+body.dark-mode .project-details p {
+    color: #e0e0e0;
 }
 
-body.dark-mode nav ul li a {
-  color: #BBF7D0;
+body.dark-mode .project-details {
+    background-color: #424242;
+    border-top: 1px solid #5e5e5e;
 }
 
-body.dark-mode nav ul li a:hover {
-  color: #FEE2E2;
+body.dark-mode .project-link {
+    background-color: #81d4fa;
+    color: #212121;
+}
+
+body.dark-mode .project-link:hover {
+    background-color: #bbdefb;
+}
+
+body.dark-mode .contact-text,
+body.dark-mode .contact-links li a,
+body.dark-mode .contact-links li i {
+    color: #bbdefb;
+}
+
+body.dark-mode .contact-links li a:hover {
+    color: #81d4fa;
+}
+
+body.dark-mode .site-footer {
+    background-color: #212121;
+}
+
+body.dark-mode .site-footer p,
+body.dark-mode .footer-links li a,
+body.dark-mode .social-media a {
+    color: #bdbdbd;
+}
+
+body.dark-mode .footer-links li a:hover,
+body.dark-mode .social-media a:hover {
+    color: #fff;
+}
+
+body.dark-mode .scroll-to-top {
+    background-color: #81d4fa;
+    color: #212121;
+}
+
+body.dark-mode .scroll-to-top:hover {
+    background-color: #bbdefb;
 }
 
 /* Mobil Uyumluluk */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    padding: 10px;
-  }
-  nav ul li {
-    margin-bottom: 10px;
-  }
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
 
-  header h1 {
-    font-size: 2rem;
-  }
+    .section {
+        padding: 40px 0;
+    }
 
-  .project-card {
-    padding: 15px;
-    margin-bottom: 15px;
-  }
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
 
-  .project-link {
-    font-size: 0.9rem;
-    padding: 8px 18px;
-  }
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-  footer .social-media a {
-    font-size: 0.9rem;
-    margin: 0 8px;
-  }
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-title {
+        font-size: 1.3rem;
+    }
+
+    .contact-links {
+        font-size: 1rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links li {
+        margin: 5px 0;
+    }
+
+    .social-media {
+        margin-top: 15px;
+    }
+
+    .social-media a {
+        font-size: 1.1rem;
+        margin: 0 8px;
+    }
 }
-
-/* Proje Kartları - Resim ve Link */
-.project-image {
-  max-width: 100%;
-  margin-top: 15px;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.project-image:hover {
-  transform: scale(1.1);
-}
-
-.project-link {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #1E3A8A;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
-}
-
-.project-link:hover {
-  background-color: #4B8DFF;
-}
-
-/* Genel Buton Efekti */
-button:active, .scroll-to-top:active, .project-link:active {
-  transform: scale(0.98);
-}
-
