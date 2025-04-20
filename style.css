@@ -206,6 +206,20 @@ body.dark-mode .scroll-to-top {
   background-color: #1e40af;
 }
 
+/* Karanlık Mod Hover Efekti */
+body.dark-mode nav ul li a:hover {
+  color: #bbf7d0;
+}
+
+/* Proje Kartı Resimleri */
+.project-image {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+/* Responsive Tasarım */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -214,11 +228,18 @@ body.dark-mode .scroll-to-top {
   nav ul li {
     margin-bottom: 10px;
   }
+
+  /* Proje Kartı */
+  .project-card {
+    margin-bottom: 15px;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.8rem;
+  }
 }
 
-/*dark mode hover efect*/
-body.dark-mode nav ul li a:hover {
-  color: #bbf7d0;
-}
+
 
 
