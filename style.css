@@ -518,7 +518,7 @@ body.dark-mode .contact-links li i {
 }
 
 body.dark-mode .contact-links li a:hover {
-    color: #81d4fa;
+    color: #5f4266;
 }
 
 body.dark-mode .site-footer {
@@ -528,7 +528,7 @@ body.dark-mode .site-footer {
 body.dark-mode .site-footer p,
 body.dark-mode .footer-links li a,
 body.dark-mode .social-media a {
-    color: #bdbdbd;
+    color: #454444;
 }
 
 body.dark-mode .footer-links li a:hover,
