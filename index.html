@@ -1,130 +1,139 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kadir Efe Yazılı</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kadir Efe Yazılı</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <!-- Header Section -->
-  <header>
-    <div class="container header-container">
-      <h1>Kadir Efe Yazılı</h1>
-      <p>Yönetim Bilişim Sistemleri Öğrencisi | Data Science Trainee |</p>
-      <button id="toggleMode" class="mode-button">Karanlık Mod</button>
-    </div>
-  </header>
-
-  <!-- About Section -->
-  <section id="about" class="section-container fade-in">
-    <div class="container about-container">
-      <h2>Hakkımda</h2>
-      <p>Ben Kadir Efe, teknolojiyi ve yazılım geliştirmeyi seven biriyim. Python, C#, yapay zeka, kurumsal kaynak planlama ve veri bilimi ile ilgileniyorum. Aynı zamanda içerik üretmeyi seviyor, öğrenmeye ve paylaşmaya önem veriyorum. Her geçen gün kendimi geliştirmeye devam ediyorum.</p>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section-container fade-in">
-    <div class="container projects-container">
-      <h2>Projeler</h2>
-
-      <!-- Project Card 1 -->
-      <div class="project-card" onclick="toggleDetails(this)">
-        <h3>Horonmatik</h3>
-        <p class="project-desc">Web projesi.</p>
-        <div class="project-details">
-          <p>Bu proje bir web uygulamasıdır. Kullanıcıların seçebileceği farklı kemençe melodilerini çalar ve animasyonlu horon figürleri eşliğinde bir görsel deneyim sunar.</p>
-          <img src="images/horonmatikdemo.gif" alt="Horonmatik Demo" class="project-image">
-          <a href="https://chlorinated-freezing-emery.glitch.me/" target="_blank" class="project-link">Proje Linki</a>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Kadir Efe Yazılı</a>
+            <ul class="nav-links">
+                <li><a href="#about">Hakkımda</a></li>
+                <li><a href="#projects">Projeler</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+            <button id="toggleMode" class="mode-button"><i class="fas fa-moon"></i></button>
         </div>
-      </div>
+    </nav>
 
-      <!-- Project Card 2 -->
-      <div class="project-card" onclick="toggleDetails(this)">
-        <h3>İstanbul Trafik Analizi</h3>
-        <p class="project-desc">Kaggle'da paylaştığım veri bilimi projesi.</p>
-        <div class="project-details">
-          <p>Bu projede İstanbul'daki trafik yoğunluğu zaman serileri ile analiz edildi. Pandemi etkisi, bayramlar ve haftalık değişim incelendi.</p>
-          <a href="https://www.kaggle.com/kadirefeyazili/istanbul-traffic-analysis" target="_blank" class="project-link">Proje Linki</a>
+    <header class="hero">
+        <div class="container hero-container">
+            <h1 class="hero-title">Kadir Efe Yazılı</h1>
+            <p class="hero-subtitle">Yönetim Bilişim Sistemleri Öğrencisi | Data Science Trainee</p>
+            <a href="#contact" class="hero-button">İletişime Geç</a>
         </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section-container fade-in">
-    <div class="container contact-container">
-      <h2>İletişim</h2>
-      <ul class="contact-links">
-        <li>Email: <a href="mailto:kadirefeyazili@outlook.com">kadirefeyazili@outlook.com</a></li>
-        <li>GitHub: <a href="https://github.com/KadirEfeYazili" target="_blank">Profilim</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/kadirefeyazili/" target="_blank">Profilim</a></li>
-      </ul>
-    </div>
-  </section>
+    <section id="about" class="section fade-in">
+        <div class="container about-container">
+            <h2 class="section-title">Hakkımda</h2>
+            <p class="about-text">Ben Kadir Efe, teknolojiyi ve yazılım geliştirmeyi seven biriyim. Python, C#, yapay zeka, kurumsal kaynak planlama ve veri bilimi ile ilgileniyorum. Aynı zamanda içerik üretmeyi seviyor, öğrenmeye ve paylaşmaya önem veriyorum. Her geçen gün kendimi geliştirmeye devam ediyorum.</p>
+        </div>
+    </section>
 
-  <!-- Footer Section -->
-  <footer>
-    <div class="container footer-container">
-      <p>&copy; 2025 Kadir Efe Yazılı. Tüm Hakları Saklıdır.</p>
-      <ul>
-        <li><a href="#privacy-policy">Gizlilik Politikası</a></li>
-        <li><a href="#terms-of-service">Kullanım Şartları</a></li>
-      </ul>
-      <div class="social-media">
-        <a href="https://www.linkedin.com/in/kadirefeyazili/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/KadirEfeYazili" target="_blank">GitHub</a>
-      </div>
-    </div>
-  </footer>
+    <section id="projects" class="section bg-light fade-in">
+        <div class="container projects-container">
+            <h2 class="section-title">Projeler</h2>
 
-  <!-- Scroll to Top Button -->
-  <button id="scrollToTop" class="scroll-to-top">Yukarı</button>
+            <div class="project-card" onclick="toggleDetails(this)">
+                <h3 class="project-title">Horonmatik</h3>
+                <p class="project-description">Web projesi.</p>
+                <div class="project-details">
+                    <p>Bu proje bir web uygulamasıdır. Kullanıcıların seçebileceği farklı kemençe melodilerini çalar ve animasyonlu horon figürleri eşliğinde bir görsel deneyim sunar.</p>
+                    <img src="images/horonmatikdemo.gif" alt="Horonmatik Demo" class="project-image">
+                    <a href="https://chlorinated-freezing-emery.glitch.me/" target="_blank" class="project-link">Proje Linki</a>
+                </div>
+            </div>
 
-  <script>
-    const toggle = document.getElementById("toggleMode");
-    toggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-    });
+            <div class="project-card" onclick="toggleDetails(this)">
+                <h3 class="project-title">İstanbul Trafik Analizi</h3>
+                <p class="project-description">Kaggle'da paylaştığım veri bilimi projesi.</p>
+                <div class="project-details">
+                    <p>Bu projede İstanbul'daki trafik yoğunluğu zaman serileri ile analiz edildi. Pandemi etkisi, bayramlar ve haftalık değişim incelendi.</p>
+                    <a href="https://www.kaggle.com/kadirefeyazili/istanbul-traffic-analysis" target="_blank" class="project-link">Proje Linki</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    function toggleDetails(card) {
-      card.classList.toggle('active');
-    }
+    <section id="contact" class="section fade-in">
+        <div class="container contact-container">
+            <h2 class="section-title">İletişim</h2>
+            <p class="contact-text">Benimle iletişime geçmek için aşağıdaki bağlantıları kullanabilirsiniz.</p>
+            <ul class="contact-links">
+                <li><i class="fas fa-envelope"></i> Email: <a href="mailto:kadirefeyazili@outlook.com">kadirefeyazili@outlook.com</a></li>
+                <li><i class="fab fa-github"></i> GitHub: <a href="https://github.com/KadirEfeYazili" target="_blank">Profilim</a></li>
+                <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/kadirefeyazili/" target="_blank">Profilim</a></li>
+            </ul>
+        </div>
+    </section>
 
-    document.addEventListener('scroll', function() {
-      const elements = document.querySelectorAll('.fade-in');
-      elements.forEach(function(element) {
-        if (isElementInViewport(element)) {
-          element.classList.add('visible');
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p>&copy; 2025 Kadir Efe Yazılı. Tüm Hakları Saklıdır.</p>
+            <ul class="footer-links">
+                <li><a href="#privacy-policy">Gizlilik Politikası</a></li>
+                <li><a href="#terms-of-service">Kullanım Şartları</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/kadirefeyazili/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/KadirEfeYazili" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollToTop" class="scroll-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        const toggle = document.getElementById("toggleMode");
+        toggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+            const icon = toggle.querySelector('i');
+            icon.classList.toggle('fas');
+            icon.classList.toggle('fa-sun');
+            icon.classList.toggle('fa-moon');
+        });
+
+        function toggleDetails(card) {
+            card.classList.toggle('active');
         }
-      });
-    });
 
-    function isElementInViewport(el) {
-      const rect = el.getBoundingClientRect();
-      return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth);
-    }
+        document.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(function(element) {
+                if (isElementInViewport(element)) {
+                    element.classList.add('visible');
+                }
+            });
+        });
 
-    window.addEventListener('scroll', function() {
-      const scrollToTopButton = document.getElementById('scrollToTop');
-      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        scrollToTopButton.style.display = 'block';
-      } else {
-        scrollToTopButton.style.display = 'none';
-      }
-    });
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+        }
 
-    document.getElementById('scrollToTop').addEventListener('click', function() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  </script>
+        window.addEventListener('scroll', function() {
+            const scrollToTopButton = document.getElementById('scrollToTop');
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollToTopButton.style.display = 'block';
+            } else {
+                scrollToTopButton.style.display = 'none';
+            }
+        });
+
+        document.getElementById('scrollToTop').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
-
 
