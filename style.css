@@ -126,3 +126,52 @@ footer {
     width: 100%;
   }
 }
+
+.project-card {
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  background: #e5e7eb;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #111827;
+}
+
+.project-desc {
+  font-style: italic;
+  color: #374151;
+}
+
+.project-details {
+  display: none;
+  margin-top: 10px;
+  color: #1f2937;
+}
+
+.project-card.active .project-details {
+  display: block;
+}
+
+/* Dark mode uyumu */
+.dark-mode .project-card {
+  background: #1f2937;
+  color: #f3f4f6;
+}
+
+.dark-mode .project-card:hover {
+  background: #374151;
+}
+
+.dark-mode .project-details {
+  color: #e5e7eb;
+}
