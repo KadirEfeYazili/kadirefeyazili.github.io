@@ -17,19 +17,30 @@
   </header>
 
   <section id="about">
-    <div class="container">
+    <div class="container about-container">
       <h2>Hakkımda</h2>
-      <p class="animated">Ben Kadir Efe, teknolojiyi ve yazılım geliştirmeyi seven biriyim. Python, C#, yapay zeka ve veri bilimi ile ilgileniyorum. Aynı zamanda içerik üretmeyi seviyor, öğrenmeye ve paylaşmaya önem veriyorum.</p>
+      <p class="animated">Ben Kadir Efe, teknolojiyi ve yazılım geliştirmeyi seven biriyim. Python, C#, yapay zeka, kurumsal kaynak planlama ve veri bilimi ile ilgileniyorum. Aynı zamanda içerik üretmeyi seviyor, öğrenmeye ve paylaşmaya önem veriyorum.</p>
     </div>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="projects-section">
     <div class="container">
       <h2>Projeler</h2>
-      <ul>
-        <li><strong>Kemençematik</strong> – Kemençe üzerine Python projesi</li>
-        <li><strong>İstanbul Trafik Analizi</strong> – Kaggle'da paylaştığım veri bilimi projesi</li>
-      </ul>
+
+      <div class="project-card" onclick="toggleDetails(this)">
+        <h3 class="project-title">Kemençematik</h3>
+        <div class="project-details">
+          <p>K.</p>
+        </div>
+      </div>
+
+      <div class="project-card" onclick="toggleDetails(this)">
+        <h3 class="project-title">Proje2</h3>
+        <div class="project-details">
+          <p>Proje Hakkında</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -55,6 +66,11 @@
     toggle.addEventListener("click", () => {
       document.body.classList.toggle("dark-mode");
     });
+
+    function toggleDetails(card) {
+      card.classList.toggle('active');
+    }
   </script>
 </body>
 </html>
+
