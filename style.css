@@ -58,27 +58,6 @@ body {
     padding: 18px 25px;
 }
 
-.navbar-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.navbar-toggler-icon {
-    width: 30px;
-    height: 3px;
-    background-color: #333;
-    display: block;
-    margin: 6px auto;
-    transition: all 0.3s ease;
-}
-
-.navbar .nav-links {
-    display: flex;
-}
-
-
 .mode-button {
     background: none;
     border: none;
@@ -570,7 +549,7 @@ body.dark-mode .scroll-to-top:hover {
 @media (max-width: 768px) {
     .container {
         width: 95%;
-        padding: 8px;
+        padding: 15px;
     }
 
     .section {
@@ -585,25 +564,6 @@ body.dark-mode .scroll-to-top:hover {
     .navbar .container {
         flex-direction: column;
         align-items: flex-start;
-    }
-
-    .navbar-toggle {
-         display: block;
-    }
-
-    .navbar .nav-links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        margin-top: 20px;
-    }
-
-    .navbar .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin-bottom: 15px;
     }
 
     .mode-button {
@@ -631,8 +591,7 @@ body.dark-mode .scroll-to-top:hover {
     }
 
     .hero-title {
-        font-size: 2.5rem;
-        margin-bottom: 15px;
+        font-size: 2.8rem;
     }
 
     .hero-subtitle {
