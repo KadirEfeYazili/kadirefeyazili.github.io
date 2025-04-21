@@ -549,7 +549,7 @@ body.dark-mode .scroll-to-top:hover {
 @media (max-width: 768px) {
     .container {
         width: 95%;
-        padding: 15px;
+        padding: 12px;
     }
 
     .section {
