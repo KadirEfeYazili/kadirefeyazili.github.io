@@ -88,6 +88,10 @@
         </div>
     </footer>
 
+<button class="navbar-toggle" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
     <button id="scrollToTop" class="scroll-to-top"><i class="fas fa-arrow-up"></i></button>
 
     <script>
@@ -133,6 +137,10 @@
                 behavior: 'smooth'
             });
         });
+
+document.querySelector('.navbar-toggle').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('active');
+}); 
     </script>
 </body>
 </html>
